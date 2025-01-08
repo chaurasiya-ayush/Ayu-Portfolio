@@ -272,23 +272,23 @@ position: relative;
 @keyframes words {
     0%,
     20%{
-        content: "Frontend Designer";    font-size: 1.4rem; 
+        content: "Frontend Designer";    
     }
     21%,
     40%{
-        content: "Web Designer";   font-size: 1.4rem;
+        content: "Web Designer";   
     }
     41%,
     60%{
-        content: "UI/UX Designer";   font-size: 1.4rem;
+        content: "UI/UX Designer";  
     }
     61%,
     80%{
-        content: "Web Developer";  font-size: 1.4rem;
+        content: "Web Developer";  
     }
     81%,
     100%{
-        content: "Software Tester";  font-size: 1.4rem;
+        content: "Software Tester";  
     }
 }
 @keyframes typing{
@@ -473,7 +473,7 @@ aside .part1{
     background: var(--clr);
     transform: rotate(calc(((var(--i) - 50) * 0.004turn)));
     animation: first 2s 1;
-=======
+
 }
 .html2 .container .progress::before{
     background: var(--clr);
@@ -854,7 +854,7 @@ font-family: monospace;
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 3px;
-        animation: bounce 1.5s infinite, fade-in 1.5s forwards;
+        animation: bounce 2.4s infinite, fade-in 2.4s forwards;
         opacity: 0; /* Initially hidden */
       }
   
@@ -863,7 +863,7 @@ font-family: monospace;
        .animated-text {
         color: rgb(15, 217, 252);
         font-size: 3rem;
-        font-family: cursive;
+        font-family:sans-serif;
         font-weight: bold;
         overflow: hidden;
         white-space: nowrap;
@@ -966,10 +966,10 @@ font-family: monospace;
 
 @keyframes anim{
     from{
-        transform: translateX(0); color: transparent;
+        color: transparent;
     }
     to{
-         transform: translateX(40px); color: white;
+          color: white;
     }
 }
 
@@ -1106,10 +1106,7 @@ font-family: monospace;
     padding-top: 30px;
     background-color: rgba(0, 0, 0, 0.3);
 }
-.slider-images{
-   
 
-}
 .arrows{
     display: none;
 }
@@ -1620,7 +1617,7 @@ h1{
     margin-top: 0px;
 }
     .animated-text{
-        font-size: 1.7rem;
+        font-size: 2.5rem;
     }
 
   .slider-images .slider-img:first-child, 
