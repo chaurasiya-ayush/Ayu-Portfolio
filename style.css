@@ -1,9 +1,9 @@
 
 body{
     color: white;
-    background: conic-gradient(from 0deg ,#0c0c0cfa,#29c1df,#22413fa0,#2999df,#3684a6,#22413fa0,#29c1df,#0c0c0cfa);
-    /* background: conic-gradient(from 0deg ,#d11149,#e68aff,#ff4800,#11ebff,#cdff58,#d11149); */
+    background-color: #1f242d;
     padding: 8px;
+  
 }
 nav{
     display: grid;
@@ -29,7 +29,7 @@ header{
     font-size: 50px;
     font-family: cursive;
     font-weight: 600;
-    color: #00ffee;
+    color: #0fe;
 }
 
 .navbar .logo a {
@@ -52,19 +52,48 @@ header{
 }
 
 .nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
     
-    font-size: 1.4rem;
-    font-weight: 700;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
+    
 }
 
-.nav-links ul li a:hover {
-    border-bottom: 2px solid  rgb(100, 218, 239);
-   
-}
+
+
+/* Navbar Styles */
+
+  
+  .nav-links ul li a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .nav-links ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00ffee; /* Color for underline */
+    transition: width 1s ease-in-out;
+  }
+  
+  .nav-links ul li a:hover::before {
+    width: 100%; /* Expands underline from left to right */
+  }
+  
+  .nav-links ul li a:hover {
+    color: #00ffee; /* Text color change */
+    transition: color 1s ease-in-out;
+  }
+  
 
 /* Hamburger Menu (Visible on smaller screens) */
 .hamburger {
@@ -89,7 +118,7 @@ header{
         position: absolute;
         top: 80px;
         right: 0;
-        background-color: rgba(90, 240, 225, 0.886);
+        background-color: #0fe;
         text-align: center;
         z-index: 10;
     }
@@ -140,17 +169,36 @@ header{
    
 }
 main{
-    padding:20px;
+    
+    padding:0px;
+
     margin-top: 9%;
-   
-   
+    animation: main  linear;
+    animation-timeline: view();
+    animation-range: entry 50% cover 100%;
 }
+main img{
+    box-shadow: 4px 4px 20px 6px #181d25;
+}
+/* @keyframes main {
+    0%{
+       width: 100%; 
+     
+    }
+    100%{
+        padding-left: 7%;
+
+    width: 80%;
+    
+    }
+} */
 .mainp1{
     font-size: 1.3rem;
 }
 
 .main2 img:hover {
     box-shadow: 0px 0px 25px 4px #00ffee;
+    transition-duration: 0.5s;
 }
 
 
@@ -162,24 +210,31 @@ main{
     font-family:'permanent Marker',cursive;
     font-weight:900;
 }
-
-#icon span a{
-    color: white;
-   margin: 1%;
-    border: 1px solid white;
-    padding: 10px;
+#icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    padding: 12px;
+    height: 2rem;
+    background: transparent;
+    border: .2rem solid #00ffee;
     border-radius: 50%;
-    display: inline-block;
+    font-size: 2rem;
+    color: #00ffee;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+}
+#icons a:hover{
+    background: #1f242d;
+    color: #0fe;
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 15px #00ffee;
 }
 
-#icon span a:hover{
-color: white;
- transition-duration: 0.5s;
- font-size: 1.6rem;
 
-background-color: #00ffee;
 
-}
 .mainp1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -191,32 +246,27 @@ background-color: #00ffee;
 .mainp5{
     color: white;
 }
-.mainbutton{
-   
-   display: flex;
- 
+.btn{
+display: inline-block;
+padding: 1rem 2.8rem;
+background: #1f242d;
+box-shadow: 0px 0px 5px  #00ffee;
+border-radius: 30px;
+color: #00ffee;
+letter-spacing: 0.1rem;
+font-weight: 600;
+transition: 0.3s ease-in-out;
+cursor: pointer;
 }
-.mainbutton div{
-    margin-left: 3%;
-}
-.mainbutton button{
-    background-color: transparent;
-    border: 1px solid #00ffee;
-    color: #00ffee;
-    padding: 8px;
-   
-    width: 100px;
-    border-radius: 30px;
-}
-.mainbutton button:hover{
+.btn:hover{
+    transform: scale(1.05);
     background-color: #00ffee;
-    color: white;
-    border: 1px solid white;
-    width: 120px;
-    height: 43px;
-
-    transition-duration: 0.5s;
-
+    box-shadow: 0px 0px 15px  #00ffee;
+}
+.btn-group{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .nav1{
@@ -241,7 +291,9 @@ background-color: #00ffee;
 }
 
 .text-animation{
-    font-size: 1.2rem;
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
 }
 .text-animation span{
 position: relative;
@@ -254,42 +306,62 @@ position: relative;
 }
 .text-animation span::after{
     content: " ";
-    /* background: conic-gradient(from 0deg ,#3de3e8,#5587f3,
-    #95e1e3, #74faff ,#1e6b6d, #13b4b9, #1ae6ed,0.4); */
     position: absolute;
-    width: calc(100% +8);
+    width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid #080808 ;
+    background-color: #1f242d;
+    border-left: 3px solid #00ffee; 
     right: -8px;
-   
-    animation: cursor 0.6s infinite ,typing 20s steps(14) infinite;
+    animation: cursor 0.5s infinite ,typing 2s steps(14) infinite;
 }
 @keyframes cursor{
     to{
-        border-left: 2px solid #00ffee;     }
+        border-left: 2px solid #00ffee; 
+    }
 
 }
 @keyframes words {
     0%,
-    20%{
-        content: "Frontend Designer";    
+    10%{
+        content: "Frontend Designer";    ;
     }
-    21%,
-    40%{
+    11%,
+    20%{
         content: "Web Designer";   
     }
+    21%,
+    30%{
+        content: "UI/UX Designer";  
+    }
+    31%,
+    40%{
+        content: "Frontend Designer";    ;
+    }
     41%,
+    50%{
+        content: "Web Designer";   
+    }
+    51%,
     60%{
         content: "UI/UX Designer";  
     }
     61%,
+    70%{
+        content: "UI/UX Designer";  
+    }
+    71%,
     80%{
-        content: "Web Developer";  
+        content: "Frontend Designer";    ;
     }
     81%,
-    100%{
-        content: "Software Tester";  
+    90%{
+        content: "Web Designer";   
     }
+    91%,
+    100%{
+        content: "UI/UX Designer";  
+    }
+   
 }
 @keyframes typing{
     10%,
@@ -302,7 +374,7 @@ position: relative;
     75%,
     90%,
     95%{
-        width: 0;
+        width: 0%;
     }
     5%,
     20%,
@@ -323,10 +395,6 @@ article{
     
     
      padding: 2%;
-}
-article:hover{
-    box-shadow: 1px 0px 10px #00ffee;
-    transition-duration:1s ;
 }
 
 .article1 img{
@@ -349,8 +417,24 @@ article:hover{
     z-index: -1;
   }
   #about{
-    background-color: rgb(15, 14, 14,0.1);
+    
+    border:1px solid #00ffee;
+    animation: about linear;
+    
+    animation-timeline: view();
+    /* animation-range: entry 50% cover 40% ; */
   }
+  @keyframes about{
+    0%{
+       
+    }
+    100%{
+      border-radius: 20%; background-color: rgb(15, 14, 14,0.1); padding-left: 5%; padding-right: 5%;
+      
+        
+    }
+  }
+  
   .article2 h1{
    font-family: monospace;
    font-size: 3rem;
@@ -386,6 +470,11 @@ aside{
     padding: 20px;
     margin: 2%;
     background-color: rgb(12, 11, 11,0.1);
+   
+    animation: about linear;
+   
+    animation-timeline: view();
+    animation-range: entry 50% cover 100% ;
 }
 aside .part1{
     display: grid;
@@ -449,16 +538,10 @@ aside .part1{
 .html1 .container .progress::before{
     background: var(--clr);
     transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
-    animation: first 2s 1;
-}
-@keyframes first {
-    from{
-          background: var(--clr);
-        transform: rotate(calc(((var(--i) - 50) * 0.0turn)));
-        
-    }
     
+   
 }
+
 .html2 .container .progress::before{
     background: var(--clr);
     transform: rotate(calc(((var(--i) - 50) * 0.007turn)));
@@ -473,6 +556,8 @@ aside .part1{
     background: var(--clr);
     transform: rotate(calc(((var(--i) - 50) * 0.004turn)));
     animation: first 2s 1;
+    animation-timeline: view();
+    animation-range: entry 50% cover 100%;
 
 }
 .html2 .container .progress::before{
@@ -592,12 +677,11 @@ aside .part1{
         color: blue;
        
     }
-    .navbutton{
-        width: 61%;
-        border-radius: 10px;
+    .btn{
+        
+       
         border: none;
-        padding: 10px;
-        margin-top: 20px;
+        
     
     }
     form input::placeholder{
@@ -633,12 +717,10 @@ aside .part1{
     }
     textarea::placeholder{
         color: #00ffee;
+       
         padding: 8px;
     }
-    .navbutton {
-        background-color: #00ffee;
-        font-weight: bolder;
-    }
+ 
     #email{
         display: inline-block;
         height: 20px;
@@ -660,7 +742,7 @@ margin-bottom:27px;
 font-family: monospace;
     }
     .information1 button{
-        background-color: #00ffee;
+        
         color: black;
         width: 40%;
         padding: 8px;
@@ -727,7 +809,11 @@ font-family: monospace;
         padding-left: 30%;
         padding-bottom: 0;
     }
-    
+    .main2 img{
+   margin-right: -5px;
+  
+       
+    }
      
      .article1 img{
         width: 340px;
@@ -959,45 +1045,8 @@ font-family: monospace;
     background-color: rgb(12, 11, 11,0.2);
 
 }
-.main2{
-    animation: anim 2s 1;
-    animation-delay: 2.5s;
-}
 
-@keyframes anim{
-    from{
-        color: transparent;
-    }
-    to{
-          color: white;
-    }
-}
 
-.logo:hover{
-    animation: tag 5s 1;
-    animation-delay:2.5 ;
-}
-@keyframes tag {
-   
-    
-    to{
-        transform: rotateX(180deg); 
-    }
-     
-}
-.main2 img:hover{
-    animation: photo 5s 1;
-    animation-delay: 2.5;
-}
-@keyframes photo{
-   
-    
-    to{
-       transform: rotateY(90deg); 
-    }
-    
-     
-}
 
 
 
@@ -1442,12 +1491,22 @@ h1{
   display: block;
 }
 
+ @keyframes opac{
+     0%{
+         opacity: 0;
+     }
+     100%{
+         opacity: 1; font-size: 4rem; font-weight: ;
+     }
+ }
 .mentor {
-    
+    opacity: 0;
+    animation: opac linear;
+    animation-timeline: view();
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  font-size: 6rem;
+  font-size: 2rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
   margin-bottom: 30px;
