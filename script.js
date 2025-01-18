@@ -24,7 +24,7 @@ hamburger.addEventListener("click", () => {
         mainContent.style.display = 'block';
         mainContent.classList.add('fade-in'); // Fade in main content
       }, 500);
-    }, 2500); // Adjust delay to match animation duration
+    }, 1500); // Adjust delay to match animation duration
   });
 
   // script.js
@@ -40,3 +40,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+//Dialog box
+const Dialog = document.getElementById("dialog");
+const DialogClose = document.getElementById("dialog-close");
+const DialogOpen = document.getElementById("dialog-open");
+  // Shake effect on opening
+  DialogOpen.addEventListener('click', () => {
+    Dialog.showModal();
+   });
+
+// Shake effect on closing
+DialogClose.addEventListener('click', () => {
+  Dialog.close(); // Close the dialog after the animation
+  });
+  document.addEventListener('click', (event) => {
+    if (!DialogOpen.contains(event.target) && !DialogClose.contains(event.target)) {
+      Dialog.close();
+    }
+});
+
+AOS.init();

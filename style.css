@@ -260,7 +260,7 @@ cursor: pointer;
 }
 .btn:hover{
     transform: scale(1.05);
-    background-color: #00ffee;
+    /* background-color: rgb(0, 255, 238,0.2); */
     box-shadow: 0px 0px 15px  #00ffee;
 }
 .btn-group{
@@ -419,21 +419,9 @@ article{
   #about{
     
     border:1px solid #00ffee;
-    animation: about linear;
     
-    animation-timeline: view();
-    /* animation-range: entry 50% cover 40% ; */
   }
-  @keyframes about{
-    0%{
-       
-    }
-    100%{
-      border-radius: 20%; background-color: rgb(15, 14, 14,0.1); padding-left: 5%; padding-right: 5%;
-      
-        
-    }
-  }
+
   
   .article2 h1{
    font-family: monospace;
@@ -678,11 +666,8 @@ aside .part1{
        
     }
     .btn{
-        
-       
         border: none;
-        
-    
+  
     }
     form input::placeholder{
         color: #00ffee;
@@ -1491,18 +1476,9 @@ h1{
   display: block;
 }
 
- @keyframes opac{
-     0%{
-         opacity: 0;
-     }
-     100%{
-         opacity: 1; font-size: 4rem; font-weight: ;
-     }
- }
+
 .mentor {
-    opacity: 0;
-    animation: opac linear;
-    animation-timeline: view();
+  
   display: flex;
   justify-content: center;
   margin-top: 30px;
@@ -1773,6 +1749,20 @@ h1{
     font-weight: 600;
     line-height: 10px;
   }
+}
+
+/*Dialog box*/
+dialog {
+    transition: transform 0.3s ease;
+    color: #00ffee;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    background: rgb(0, 0, 0,0.1);
+    border-radius: 20px;
+    
+    border-top-left-radius:0px ;
+    border-bottom-right-radius:0px ;
+    position: absolute;
 }
 
 

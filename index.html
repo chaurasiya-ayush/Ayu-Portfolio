@@ -9,7 +9,8 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <title>Bootstrap Example</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
       #landing{
@@ -37,7 +38,7 @@
 
 
   <div class="return"> <a href="#home"><i class="bi bi-arrow-down"></i></a></div>
-<header>
+<header data-aos="fade-top" data-aos-duration="2400" data-aos-delay="2200">
   <nav  class="navbar" >
     <div class="logo" >
         Portfolio.
@@ -66,11 +67,11 @@
 
 
 
-  <main>
+  <main data-aos="fade-top" data-aos-duration="2400" data-aos-delay="2200">
     <div class="main2"><img src="/images/portfolio_image.jpg" width="380px" height="380px" align="right" alt="">
     <div class="main1">
       <p class="mainp1">Hi, Its's</p>
-      <p class="mainp2" id="name">Ayush Chaurasiya</p>
+      <p class="mainp2" id="name" >Ayush Chaurasiya</p>
       <p class="text-animation">I'm a <span></span></p>
       <p class="mainp4">I am Starting my journey of becoming a web developer with extensive knowledge from my teacher year expertise to create a website design , Frontend design and many more..</p>
       <div id="icons">
@@ -81,24 +82,29 @@
          <a href="https://www.google.co.in/" target="_blank"><i class="bi bi-google"></i></a>
       </div>
       <div class="btn-group">
-      <div>  <button class="btn">Download CV</button></div>
+      <div> 
+        <dialog id="dialog">
+          <p>My CV still in the process of being prepared.</p>
+          <button id="dialog-close" class="btn" style="padding: 10px;">Close</button>
+        </dialog>
+         <button id="dialog-open" class="btn" style="background-color:transparent;">Download CV </button></div>
         <div><button class="btn"><a href="#contact" style="color: #43f9f0; text-decoration: none;">Contact Me</a></button></div>
       </div>
   </div>
     </div> 
   </div>
   </main>
-  <div class="mentor">
+  <div class="mentor" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
     <span style="color: white;">About</span>
     <span style="color: #43f9f0;">Me</span>
     </div>
-  <article id="about">
-    <div class="article1">
+  <article id="about"  >
+    <div class="article1" data-aos="fade-top" data-aos-duration="1000" data-aos-delay="200">
       <img src="/images/anime.jpeg"  height="500px" width="380px" alt="">
       
       
     </div>
-    <div class="about">
+    <div class="about" data-aos="fade-top" data-aos-duration="1000" data-aos-delay="500">
       
       <p class="lorem">
        
@@ -122,8 +128,8 @@
 
     
      
-      <aside id="skills">
-        <div class="mentor" style="padding: 20px;">
+      <aside id="skills" data-aos="fade-top" data-aos-duration="1000" data-aos-delay="200">
+        <div class="mentor" style="padding: 20px;" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
           <span style="color: white;">My</span>
           <span style="color: #43f9f0">Skills</span>
           </div>
@@ -204,7 +210,7 @@
         </div>
       </aside>
 
-      <section class="marq">
+      <section class="marq" data-aos="fade-top" data-aos-duration="1000" data-aos-delay="200">
         <div class="marquee-container">
           <div class="marquee">
               <span style="margin-left: 20px;">Python</span>
@@ -300,7 +306,7 @@
  <div class="mywork" id="work">
     <!--slider-->
     
-<section class="middle">
+<section class="middle" data-aos="fade-top" data-aos-duration="1000" data-aos-delay="200">
             
   <!-- button arrows -->
   <div class="arrows">
@@ -312,8 +318,8 @@
  
  
 <div  style="padding-bottom: 20px;"  class="mentor">
-<span style="color: white;">My</span>
-<span style="color: #43f9f0;">Works</span>
+<span style="color: white;" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">My</span>
+<span style="color: #43f9f0;" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">Works</span>
 </div>
 <!-- slider -->
 <section class="slider-container" style=" display: flex; justify-content: center; text-align: center;">
@@ -403,7 +409,7 @@ jQuery(document).ready(function ($) {
 </div>
 </div>
 
-  <footer id="contact">
+  <footer id="contact" data-aos="fade-top" data-aos-duration="1000" data-aos-delay="200">
     <form action="">
    <div class="information1">
     <div class="mentor" style="margin-bottom: 20px;">
@@ -419,13 +425,14 @@ jQuery(document).ready(function ($) {
       <a href="https://www.instagram.com/_ayush_chaurasiya/profilecard/?igsh=Mm15bTV5bGowZm83" target="_blank" ><i class="bi bi-instagram"></i></a>
      <a href="https://www.google.co.in/" target="_blank"><i class="bi bi-google"></i></a>
   </div>
-<button class="btn">Dowload CV</button>
+
+<button class="btn" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" style="color: #43f9f0;">Dowload CV</button>
      </div>
       <div class="information2">
       <div class="main"><input type="text" name="Username" placeholder="Your Name"  ></div>
     <div class="main">  <input type="Email"name="password"  placeholder="Your Email"></div>
     <div class="main">  <textarea name="Message" id="" placeholder="Your Message"></textarea></div>
-      <button class="btn"> <a href="/Thankyou_page.html" style="text-decoration: none; color: black; font-weight: bold;">Submit</a></button>
+      <button class="btn" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100"> <a href="/Thankyou_page.html" style="text-decoration: none; color: #43f9f0; font-weight: bold;">Submit</a></button>
       </div>
      </form>
   </footer>
