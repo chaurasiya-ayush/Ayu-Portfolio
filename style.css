@@ -133,11 +133,14 @@ header{
     }
 
     .hamburger {
+        
         display: flex;
+      
     }
 
     .navbar.active .nav-links {
         display: block;
+
     }
 
     .navbar.active .hamburger .bar {
@@ -148,20 +151,37 @@ header{
 @media (max-width: 480px) {
     .navbar {
         padding: 1rem;
+        z-index: 999;
     }
-
+    .nav-links{
+       background-color: rgb(0, 255, 238,0.2);
+        flex-direction: column;
+       
+     
+    }
+       .main1{
+        margin-top: 50%;
+       }
+       .main2 img{
+        display: none;
+       }
+       .text-animation span::before{
+        color: red;
+       }
     .nav-links ul li a {
-        font-size: 1rem;
+        font-size: 25px;
         padding: 0.5rem;
     }
+    
 }
 
 
 .main1{
     margin-left: 5%;
+  
 }
 .main2 img{
-
+    
     border-radius: 50%;
    margin-left: 4%;
    margin-right: 4%;
@@ -240,8 +260,10 @@ main img{
 }
 .mainp4{
     font-family:'Times New Roman', Times, serif;
-    line-height: 24px;
+    line-height: 20px;
     font-weight:900 ;
+    font-size: 15px;
+    word-spacing: 4px;
 }
 .mainp5{
     color: white;
@@ -1764,5 +1786,3 @@ dialog {
     border-bottom-right-radius:0px ;
     position: absolute;
 }
-
-
