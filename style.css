@@ -200,18 +200,7 @@ main{
 main img{
     box-shadow: 4px 4px 20px 6px #181d25;
 }
-/* @keyframes main {
-    0%{
-       width: 100%; 
-     
-    }
-    100%{
-        padding-left: 7%;
 
-    width: 80%;
-    
-    }
-} */
 .mainp1{
     font-size: 1.3rem;
 }
